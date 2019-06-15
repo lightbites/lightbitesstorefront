@@ -1,8 +1,13 @@
 import React from "react";
-
+import Container from "@material-ui/core/Container";
+import SignInSide from "../src/pages/Sign-In";
+import Header from "../src/components/Header";
 
 function App() {
-  return <h1>Test</h1>;
+  return <Container maxWidth="xl">
+    <Header />
+    <SignInSide />
+  </Container>;
 }
 
 export default App;
