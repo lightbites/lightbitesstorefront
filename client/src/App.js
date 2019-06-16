@@ -4,10 +4,13 @@ import SignInSide from "../src/pages/Sign-In";
 import Header from "../src/components/Header";
 
 function App() {
-  return <Container maxWidth="xl">
+  return <div>
     <Header />
-    <SignInSide />
-  </Container>;
+    <Container maxWidth="xl">
+    
+      <SignInSide />
+    </Container>
+  </div>;
 }
 
 export default App;

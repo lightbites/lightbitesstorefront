@@ -161,7 +161,7 @@ export default function Header() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" color="#00867d">
+      <AppBar position="static" color="secondary">
         <Toolbar>
           <IconButton
             edge="start"
@@ -175,30 +175,13 @@ export default function Header() {
             Light Bites
           </Typography>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ "aria-label": "Search" }}
-            />
+            
+            
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="Show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="Show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+            
+            
             <IconButton
               edge="end"
               aria-label="Account of current user"
