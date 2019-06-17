@@ -59,7 +59,7 @@ export default function SignInSide() {
     <div>
       
       <Grid container component="main" className={classes.root}>
-        <h1>Sign In</h1>
+        
         <CssBaseline />
         <Grid item xs={false} sm={4} md={7} className={classes.image} />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
