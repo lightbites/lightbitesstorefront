@@ -1,15 +1,17 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import SignInSide from "../src/pages/Sign-In";
-import Header from "../src/components/Header";
+import Header from "../src/components/Header-Welcome";
+import StickyFooter from "../src/components/Footer";
+import Welcome from "./pages/Welcome";
 
 function App() {
   return <div>
     <Header />
-    <Container maxWidth="xl">
+    <Container>
     
-      <SignInSide />
+      <Welcome />
     </Container>
+    <StickyFooter />
   </div>;
 }
 

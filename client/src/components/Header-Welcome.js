@@ -113,7 +113,7 @@ export default function Header() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Sign In</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
@@ -160,6 +160,7 @@ export default function Header() {
   );
 
   return (
+     
     <div className={classes.grow}>
       <AppBar position="static" color="secondary">
         <Toolbar>
@@ -169,6 +170,7 @@ export default function Header() {
             color="inherit"
             aria-label="Open drawer"
           >
+            
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
