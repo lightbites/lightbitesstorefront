@@ -12,7 +12,7 @@ import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Header from "../../components/Header";
+import Header from "../../components/Header-Welcome";
 
 function LoveFood() {
   return (
@@ -57,7 +57,7 @@ export default function SignInSide() {
 
   return ( 
     <div>
-      
+      <Header />
       <Grid container component="main" className={classes.root}>
         
         <CssBaseline />
@@ -108,12 +108,10 @@ export default function SignInSide() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
-                  Forgot password?
-                  </Link>
+                 
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

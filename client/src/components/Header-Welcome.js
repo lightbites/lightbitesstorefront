@@ -5,15 +5,14 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 
-import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
+
 
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
+
 import MoreIcon from "@material-ui/icons/MoreVert";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -113,8 +112,9 @@ export default function Header() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Sign In</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <Link to="/signin"><MenuItem onClick={handleMenuClose}>Log In</MenuItem></Link>
+      <Link to="/signup"><MenuItem onClick={handleMenuClose}>Sign Up</MenuItem></Link>
+      <Link to="/profile"><MenuItem onClick={handleMenuClose}>My Profile</MenuItem></Link>
     </Menu>
   );
 
@@ -129,22 +129,8 @@ export default function Header() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton aria-label="Show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="Show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
+      
+        
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="Account of current user"
@@ -162,20 +148,14 @@ export default function Header() {
   return (
      
     <div className={classes.grow}>
-      <AppBar position="static" color="secondary">
+      <AppBar position="static" color="inherit">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Open drawer"
-          >
-            
-            <MenuIcon />
-          </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
+          
+          <Link to="/">
+            <Typography className={classes.title} variant="h6" noWrap>
             Light Bites
-          </Typography>
+            </Typography>
+          </Link>
           <div className={classes.search}>
             
             
