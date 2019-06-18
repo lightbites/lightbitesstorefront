@@ -11,12 +11,13 @@ function getDBConfigFromUrl(url){
 
 }
 
+//NOTE: Using local machine data here to get app running
 const config = {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "local_db",
-    "host": "127.0.0.1",
+    "password": "1234",
+    "database": "light_bites_db",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": false
   },
