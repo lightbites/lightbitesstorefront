@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL(13, 2),
             allowNull: false
         },
+        repeatItem: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         title1: {
             type: DataTypes.STRING(100),
             allowNull: false
@@ -36,7 +40,13 @@ module.exports = (sequelize, DataTypes) => {
         line17: DataTypes.STRING(50),
         line18: DataTypes.STRING(50),
         line19: DataTypes.STRING(50),
-        line20: DataTypes.STRING(50)
+        line20: DataTypes.STRING(50),
+        imageURL: {
+            type: DataTypes.STRING(100),
+            allowNull: false
+        }
+
+
     });
     return Stock;
 }
