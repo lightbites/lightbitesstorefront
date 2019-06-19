@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let shoppingCart = sequelize.define('shopping_card', {
+    let shoppingCart = sequelize.define('shopping_cart', {
         unique_id: {
             type: DataTypes.INTEGER,
             allowNull: false
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         price: {
-            types: DataTypes.DECIMAL(13,2),
+            type: DataTypes.DECIMAL(13,2),
             allowNull: false
         }
     });

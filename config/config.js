@@ -15,7 +15,7 @@ function getDBConfigFromUrl(url){
 const config = {
   "development": {
     "username": "root",
-    "password": "bexley10",
+    "password": "1234",
     "database": "light_bites_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
