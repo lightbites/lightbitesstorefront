@@ -1,15 +1,42 @@
 module.exports = function(sequelize, DataTypes) {
-  var Customer = sequelize.define("Customer", {
-    firstname: DataTypes.STRING,
-    lastname: DataTypes.STRING,
-    phonenumber: DataTypes.STRING,
-    email: DataTypes.STRING,
-    address1: DataTypes.STRING,
-    address2: DataTypes.STRING,
-    address3: DataTypes.STRING,
-    city: DataTypes.STRING,
-    state: DataTypes.STRING,
-    zip: DataTypes.STRING
+  let Customer = sequelize.define("Customer", {
+    unique_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    firstname: {
+      type: DataTypes.STRING(50),
+      allowNull: false
+    },
+    lastname: {
+      type: DataTypes.STRING(50),
+      allowNull: false
+    },
+    phonenumber: {
+      type: DataTypes.STRING(12),
+      allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING(100),
+      allowNull: false
+    },
+    address1: {
+      type: DataTypes.STRING(100),
+      allowNull: false,
+    },
+    address2: DataTypes.STRING(100),
+    address3: DataTypes.STRING(100),
+    city: {
+      type: DataTypes.STRING(50),
+      allowNull: false
+    },
+    state: {
+      type: DataTypes.STRING(50),
+      allowNull: false
+    },
+    zip: DataTypes.STRING(10)
   });
   return Customer;
 };
