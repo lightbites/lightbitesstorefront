@@ -1,8 +1,23 @@
 module.exports = (sequelize, DataTypes) => {
     var Stock = sequelize.define("stock", {
-        fulfillment_date: DataTypes.DATE,
-        price: DataTypes.DECIMAL(13, 2),
-        title1: DataTypes.STRING(100),
+        meal_id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
+        },
+        fulfillment_date: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+        price: {
+            type: DataTypes.DECIMAL(13, 2),
+            allowNull: false
+        },
+        title1: {
+            type: DataTypes.STRING(100),
+            allowNull: false
+        },
         title2: DataTypes.STRING(50),
         title3: DataTypes.STRING(50),
         line04: DataTypes.STRING(50),
