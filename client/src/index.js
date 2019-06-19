@@ -7,6 +7,7 @@ import SignInSide from "./pages/Sign-In";
 import SignUp from "./pages/Sign-Up";
 import Profile from "./pages/Profile";
 import Cart from "./pages/Cart";
+import Meals from "./pages/Meals";
 import Notfound from "./notfound";
 
 const routing = (
@@ -21,6 +22,7 @@ const routing = (
         <Route path="/signup" component={SignUp} />
         <Route path="/profile" component={Profile} />
         <Route path="/cart" component={Cart} />
+        <Route path="/meals" component={Meals} />
         <Route component={Notfound} />
       </Switch>
     </div>
