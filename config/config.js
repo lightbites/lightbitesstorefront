@@ -8,14 +8,14 @@ function getDBConfigFromUrl(url){
     "database": firstSplit[3].split("/").slice(-1)[0],
     "host": secondSplit[1],
   };
-
+  
 }
 
 //NOTE: Using local machine data here to get app running
 const config = {
   "development": {
     "username": "root",
-    "password": "1234",
+    "password": "$Wordf1sh211986",
     "database": "light_bites_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
