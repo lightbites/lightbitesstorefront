@@ -4,19 +4,22 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-
-
 import AccountCircle from "@material-ui/icons/AccountCircle";
-
 import MoreIcon from "@material-ui/icons/MoreVert";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
+    
+  },
+  onMouseOver:{
+    
+    fontWeight: "bold",
+    color: "#333"
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -151,19 +154,32 @@ export default function Header() {
       <AppBar position="static" color="inherit">
         <Toolbar>
           
-          <Link to="/">
-            <Typography className={classes.title} variant="h6" noWrap>
+          <NavLink className={classes.onMouseOver}
+            to="/"
+          > <Typography className={classes.title} variant="h6" noWrap>
             Light Bites
             </Typography>
-          </Link>
-          <div className={classes.search}>
-            
-            
-          </div>
+          </NavLink>
+          
+          
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             
-            
+            <Link to="/cart">
+              <IconButton
+                edge="end"
+                aria-label="Account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="#333"
+              >
+                <i className="material-icons">
+shopping_cart
+                </i>
+              </IconButton>
+            </Link>
+
             <IconButton
               edge="end"
               aria-label="Account of current user"

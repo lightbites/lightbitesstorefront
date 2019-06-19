@@ -14,9 +14,11 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    paddingLeft: "1%"
   },
   card: {
     maxWidth: 345,
@@ -52,7 +54,7 @@ const useStyles = makeStyles(theme => ({
     paddingRight: "5%",
     paddingTop: "5%",
     textAlign: "left",
-    width: "35%"
+    width: "25%"
   }
 }));
 
@@ -116,7 +118,7 @@ export default function CenteredGrid() {
             
             <p>Please email us with questions; We are happy to help</p><br />
             <Link to="/signup"><Button variant="contained" color="primary" className={classes.button}>
-            Get Started
+            Start Your Delivery
             </Button></Link>
           
           </Grid>
