@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -54,6 +54,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignInSide() {
   const classes = useStyles();
+  const [email, setEmail] = useState("");  
+  const [password, setPassword] = useState("");
 
   return ( 
     <div>
@@ -74,10 +76,12 @@ export default function SignInSide() {
               <TextField
                 variant="outlined"
                 margin="normal"
+                value={email}
                 required
                 fullWidth
                 id="email"
                 label="Email Address"
+                onChange={e => setEmail(e.target.value)}
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -85,10 +89,12 @@ export default function SignInSide() {
               <TextField
                 variant="outlined"
                 margin="normal"
+                value={password}
                 required
                 fullWidth
                 name="password"
                 label="Password"
+                onChange={e => setPassword(e.target.value)}
                 type="password"
                 id="password"
                 autoComplete="current-password"
