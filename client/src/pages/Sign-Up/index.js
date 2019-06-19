@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -39,8 +39,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignUp() {
+function SignUp() {
   const classes = useStyles();
+  const [firstName, setFirstName] = useState("");  
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");  
+  const [password, setPassword] = useState("");
+  
+
+  
+
+  
 
   return (
     <Container component="main" maxWidth="xs">
@@ -59,9 +68,11 @@ export default function SignUp() {
                 autoComplete="fname"
                 name="firstName"
                 variant="outlined"
+                value={firstName}
                 required
                 fullWidth
                 id="firstName"
+                onChange={e => setFirstName(e.target.value)}
                 label="First Name"
                 autoFocus
               />
@@ -69,9 +80,11 @@ export default function SignUp() {
             <Grid item xs={12} sm={6}>
               <TextField
                 variant="outlined"
+                value={lastName}
                 required
                 fullWidth
                 id="lastName"
+                onChange={e => setLastName(e.target.value)}
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
@@ -80,9 +93,11 @@ export default function SignUp() {
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
+                value={email}
                 required
                 fullWidth
                 id="email"
+                onChange={e => setEmail(e.target.value)}
                 label="Email Address"
                 name="email"
                 autoComplete="email"
@@ -91,9 +106,11 @@ export default function SignUp() {
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
+                value={password}
                 required
                 fullWidth
                 name="password"
+                onChange={e => setPassword(e.target.value)}
                 label="Password"
                 type="password"
                 id="password"
@@ -106,6 +123,7 @@ export default function SignUp() {
           </Grid>
           <Button
             type="submit"
+            
             fullWidth
             variant="contained"
             color="primary"
@@ -127,3 +145,6 @@ export default function SignUp() {
     </Container>
   );
 }
+
+
+export default SignUp;

@@ -35,11 +35,12 @@ INSERT INTO stock (fulfillment_date, price, title1, title2, title3, line04, line
 
 
 CREATE TABLE customer ( -- Login information table – for authentication
-	unique_id integer not null auto_increment primary key, -- unique id for customer
-	firstname varchar(50) not null, -- customer first name
+    unique_id integer not null auto_increment primary key, -- unique id for customer
+    firstname varchar(50) not null, -- customer first name
     lastname varchar(50) not null, -- customer last name
     phonenumber varchar(12) not null, -- customer phone number
     email varchar(100) not null, -- customer email 
+    password varchar(50) not null, -- user password
     address1 varchar(100) not null, -- customer address line 1
     address2 varchar(100), -- customer address line 2
     address3 varchar(100), -- customer address line 3
@@ -47,11 +48,10 @@ CREATE TABLE customer ( -- Login information table – for authentication
     state varchar(50) not null, -- customer address state
     zip varchar(10) -- customer address zip code
 );
-INSERT INTO customer (firstname, lastname, phonenumber, email, address1, address2, address3, city, state, zip) VALUES ('Anthony','Duncan','281-555-1234','test@gmail.com','1234 test rd','Apt 001', '', 'Austin','TX','78750');
-INSERT INTO customer (firstname, lastname, phonenumber, email, address1, address2, address3, city, state, zip) VALUES ('Justin','Mozley','281-500-1234','test1@gmail.com','1120 test ln','Apt 002', '', 'Buda','TX','78610');
-INSERT INTO customer (firstname, lastname, phonenumber, email, address1, address2, address3, city, state, zip) VALUES ('Owais','Jamil','281-550-1234','test2@gmail.com','1234 test ave','', '', 'Kyle','TX','78610');
-INSERT INTO customer (firstname, lastname, phonenumber, email, address1, address2, address3, city, state, zip) VALUES ('Kevin','Henderson','281-000-1234','test3@gmail.com','1235 test rd','Apt 004', '', 'Buda','TX','78610');
-
+INSERT INTO customer (firstname, lastname, phonenumber, email, password, address1, address2, address3, city, state, zip) VALUES ('Anthony','Duncan','281-555-1234','test@gmail.com','password123','1234 test rd','Apt 001', '', 'Austin','TX','78750');
+INSERT INTO customer (firstname, lastname, phonenumber, email, password, address1, address2, address3, city, state, zip) VALUES ('Justin','Mozley','281-500-1234','test1@gmail.com','password123','1120 test ln','Apt 002', '', 'Buda','TX','78610');
+INSERT INTO customer (firstname, lastname, phonenumber, email, password, address1, address2, address3, city, state, zip) VALUES ('Owais','Jamil','281-550-1234','test2@gmail.com','password123','1234 test ave','', '', 'Kyle','TX','78610');
+INSERT INTO customer (firstname, lastname, phonenumber, email, password, address1, address2, address3, city, state, zip) VALUES ('Kevin','Henderson','281-000-1234','test3@gmail.com','password123','1235 test rd','Apt 004', '', 'Buda','TX','78610');
 
 CREATE TABLE orders ( -- Orders – Deliveries or pickups, will create a unique id to attach to shopping cart and carry forward.
 	unique_id integer not null, -- unique_id for the customer (customer.unique_id)
