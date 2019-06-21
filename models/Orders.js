@@ -2,13 +2,13 @@ module.exports = (sequelize, DataTypes) => {
     let orders = sequelize.define("orders", {
         unique_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        order_id: {
-            type: DataTypes.INTEGER,
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
+        },
+        order_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         fullfillment_date: {
             type: DataTypes.DATE,
@@ -28,6 +28,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(20),
             allowNull: false
         }
+    },{
+        freezeTableName: true,
+        tableName: 'orders'
     });
     return orders;
 }
