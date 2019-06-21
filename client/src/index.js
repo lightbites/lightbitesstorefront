@@ -9,12 +9,11 @@ import Profile from "./pages/Profile";
 import Cart from "./pages/Cart";
 import Meals from "./pages/Meals";
 import Notfound from "./notfound";
+import MealCard from "./components/Card";
 
 const routing = (
-  
   <Router>
     <div>
-      
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/welcome" component={Welcome} />
@@ -23,6 +22,7 @@ const routing = (
         <Route path="/profile" component={Profile} />
         <Route path="/cart" component={Cart} />
         <Route path="/meals" component={Meals} />
+        <Route path="/card" component={MealCard} />
         <Route component={Notfound} />
       </Switch>
     </div>

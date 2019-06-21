@@ -3,10 +3,15 @@ import Header from "../../components/Header-Welcome";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import meals from "../../Assets/test/meals.json";
+import MealCard from "../../components/Card";
 
+console.log(meals);
 const useStyles = makeStyles(() => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    maxWidth: 1200,
+    margin: "0 auto"
   },
   box: {
     backgroundImage:
@@ -39,6 +44,13 @@ export default function Meals() {
           <Grid item xs={8}>
             <Box className={classes.box} />
           </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
+            <Grid item xs={3}>
+              <MealCard title="Keto Pizza" />
+            </Grid>
+          ))}
         </Grid>
       </div>
     </div>
