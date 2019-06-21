@@ -3,7 +3,12 @@ import Header from "../../components/Header-Welcome";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import meals from "../../Assets/test/meals.json";
+import MealCard from "../../components/Card";
+import SimpleMenu from "../../components/Menu";
+import Container from "@material-ui/core/Container";
 
+console.log(meals);
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1
@@ -19,6 +24,10 @@ const useStyles = makeStyles(() => ({
   },
   paragraph: {
     marginTop: "20px"
+  },
+  menu: {
+      float: "right",
+      marginTop: 10
   }
 }));
 export default function Meals() {
@@ -26,21 +35,33 @@ export default function Meals() {
   return (
     <div>
       <Header />
-      <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={4}>
-            <p className={classes.paragraph}>
-              Bacon ipsum dolor amet ham hock leberkas beef landjaeger, corned
-              beef picanha alcatra prosciutto rump burgdoggen beef ribs pastrami
-              biltong. Ground round andouille tri-tip biltong ham bacon shankle
-              shank landjaeger porchetta.{" "}
-            </p>
+      <Container fixed>
+        <div className={classes.root}>
+          <Grid container spacing={3}>
+            <Grid item xs={4}>
+              <p className={classes.paragraph}>
+                Bacon ipsum dolor amet ham hock leberkas beef landjaeger, corned
+                beef picanha alcatra prosciutto rump burgdoggen beef ribs
+                pastrami biltong. Ground round andouille tri-tip biltong ham
+                bacon shankle shank landjaeger porchetta.{" "}
+              </p>
+            </Grid>
+            <Grid item xs={8}>
+              <Box className={classes.box} />
+            </Grid>
           </Grid>
-          <Grid item xs={8}>
-            <Box className={classes.box} />
+          <div className={classes.menu}>
+            <SimpleMenu />
+          </div>
+          <Grid container spacing={3}>
+            {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
+              <Grid item xs={3}>
+                <MealCard title="Keto Pizza" />
+              </Grid>
+            ))}
           </Grid>
-        </Grid>
-      </div>
+        </div>
+      </Container>
     </div>
   );
 }
