@@ -2,7 +2,9 @@ module.exports = (sequelize, DataTypes) => {
     let whatOrdered = sequelize.define('what_ordered', {
         unique_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
         },
         order_id: {
             type: DataTypes.INTEGER,
