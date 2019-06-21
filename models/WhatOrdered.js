@@ -30,6 +30,9 @@ module.exports = (sequelize, DataTypes) => {
         delivery_date: {
             type: DataTypes.DATE
         }
+    },{
+        freezeTableName: true,
+        tableName: 'what_ordered'
     });
     return whatOrdered;
 }
