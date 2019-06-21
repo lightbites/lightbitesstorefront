@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const burgerRoutes = require("./burger");
+//Sequelize Routes
+const customerRoutes = require('./customer');
 
 // Book routes
-router.use("/burger", burgerRoutes);
-
+router.use('/customers', customerRoutes)
 module.exports = router;
