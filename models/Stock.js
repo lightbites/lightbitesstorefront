@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    var Stock = sequelize.define("stock", {
+    var Stock = sequelize.define("Stock", {
         meal_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -12,10 +12,6 @@ module.exports = (sequelize, DataTypes) => {
         },
         price: {
             type: DataTypes.DECIMAL(13, 2),
-            allowNull: false
-        },
-        repeatItem: {
-            type: DataTypes.INTEGER,
             allowNull: false
         },
         title1: {
@@ -45,9 +41,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100),
             allowNull: false
         }
-
-
+    },{
+        freezeTableName: true,
+        tableName: 'Stock'
     });
     return Stock;
-
 }

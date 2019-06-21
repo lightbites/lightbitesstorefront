@@ -2,6 +2,8 @@ module.exports = (sequelize, DataTypes) => {
     let shoppingCart = sequelize.define('shopping_cart', {
         unique_id: {
             type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
             allowNull: false
         },
         order_id: {
@@ -22,6 +24,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL(13,2),
             allowNull: false
         }
+    },{
+        freezeTableName: true,
+        tableName: 'shopping_cart'
     });
     return shoppingCart;
 }
