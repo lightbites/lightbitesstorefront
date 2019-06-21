@@ -10,9 +10,9 @@ import Cart from "./pages/Cart";
 import Meals from "./pages/Meals";
 import Notfound from "./notfound";
 import Helmet from 'react-helmet'
+import SimpleMenu from "./components/Menu"
 
 const routing = (
-  
   <Router>
     <div>
       <Helmet>
@@ -28,6 +28,7 @@ const routing = (
         <Route path="/profile" component={Profile} />
         <Route path="/cart" component={Cart} />
         <Route path="/meals" component={Meals} />
+        <Route path="/menu" component={SimpleMenu} /> {/* remove path before deploy */}
         <Route component={Notfound} />
       </Switch>
     </div>
