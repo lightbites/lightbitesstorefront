@@ -49,4 +49,5 @@ module.exports = (sequelize, DataTypes) => {
 
     });
     return Stock;
+
 }

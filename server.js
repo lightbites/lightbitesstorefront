@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 var db = require("./models");
 
+var run = require('./scripts/seedDB');
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
