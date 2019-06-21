@@ -9,12 +9,17 @@ import Profile from "./pages/Profile";
 import Cart from "./pages/Cart";
 import Meals from "./pages/Meals";
 import Notfound from "./notfound";
+import Helmet from 'react-helmet'
 
 const routing = (
   
   <Router>
     <div>
-      
+      <Helmet>
+        <title>
+          Light Bites
+        </title>
+      </Helmet>
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/welcome" component={Welcome} />
