@@ -2,33 +2,33 @@ const router = require('express').Router();
 const db = require('../../models');
 
 router.post('/create', (req, res) => {
-    db.what_ordered.create({
+    //NOTE: Only using NOT NULL columns
+    db.order_history.create({
         order_id: req.body.order_id,
-        fulfillment_date: req.body.fulfillment_date,
         meal_id: req.body.meal_id,
         quantity: req.body.quantity,
-        price: req.body.quantity,
-        order_date: req.body.order_date
-    }).then(ordered => {
-        console.log(ordered);
-        return res.json(ordered);
+        price: req.body.price,
+        order_date: req.body.order_date 
+    }).then(hist => {
+        console.log(hist);
+        return res.json(hist);
     })
 });
 
 router.get('/', (req, res) => {
-    db.what_ordered.findAll({}).then(ordered => res.json(ordered));
-});
+    db.order_history.findAll({}).then(hist => res.json(hist));
+})
 
 router.get('/:attribute/:value', (req, res) => {
-    db.what_ordered.findAll({
+    db.order_history.findAll({
         where: {
             [req.params.attribute]:req.params.value
         }
     }).then(item => res.json(item));
-});
+})
 
 router.put('/:attribute/:value', (req, res) => {
-    db.what_ordered.update(req.body, {
+    db.order_history.update(req.body, {
         where: {
             [req.params.attribute]:req.params.value
         }
@@ -36,11 +36,11 @@ router.put('/:attribute/:value', (req, res) => {
 })
 
 router.delete('/:attribute/:value', (req, res) => {
-    db.what_ordered.destroy({
+    db.order_history.destroy({
         where: {
             [req.params.attribute]:req.params.value
         }
-    }).then(dItem => res.json(dItem))
+    }).then(dItem => res.json(dItem));
 })
 
 module.exports = router;
