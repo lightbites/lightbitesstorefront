@@ -2,7 +2,9 @@ module.exports = (sequelize, DataTypes) => {
     var orderHistory = sequelize.define('order_history', {
         unique_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
         },
         order_id: {
             type: DataTypes.INTEGER,
@@ -30,6 +32,10 @@ module.exports = (sequelize, DataTypes) => {
         delivery_date: {
             type: DataTypes.DATE
         }
+    },{
+        freezeTableName: true,
+        tableName: 'order_history',
+        timestamps: false
     });
     return orderHistory;
 }

@@ -41,6 +41,9 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     zip: DataTypes.STRING(10)
+  },{
+    freezeTableName: true,
+    tableName: 'Customer'
   });
   return Customer;
 };
