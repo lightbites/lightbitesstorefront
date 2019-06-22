@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         fulfillment_date: {
-
+            type: DataTypes.INTEGER
+        },
         order_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
         fulfillment_date: {
-
             type: DataTypes.DATE,
         },
         order_date: {
