@@ -6,11 +6,15 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
+
+        fulfillment_date: {
+
         order_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        fullfillment_date: {
+        fulfillment_date: {
+
             type: DataTypes.DATE,
         },
         order_date: {
