@@ -4,19 +4,39 @@ import Footer from '../../components/Footer'
 //TODO: Cart Item
 import Item from './Item'
 //TODO: Total/Checkout
+//TODO: Materialize
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%'
+  }
+}
 
-//Material Components
-import Container from '@material-ui/core/Container'
+/*
+  Map Item component
+  Props
+  - Product Information
+  - Quantity
 
+  State
+  - Quantity
+  - Remove Button
+
+  Methods?
+*/
 
 class Cart extends Component {
+  grabCart() {
+    return null;
+  }
   render() {
       return (
         <div>
           <Header />
-          <Container>
-            <Item />
-          </Container>
+            <div style={styles.container}>
+              <Item />
+            </div>
           <Footer />
         </div>
       )
