@@ -8,23 +8,22 @@ import SignUp from "./pages/Sign-Up";
 import Profile from "./pages/Profile";
 import Cart from "./pages/Cart";
 import Meals from "./pages/Meals";
-import Notfound from "./notfound";
+
 
 const routing = (
   
   <Router>
     <div>
       
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/welcome" component={Welcome} />
-        <Route path="/signin" component={SignInSide} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/meals" component={Meals} />
-        <Route component={Notfound} />
-      </Switch>
+      
+      <Route exact path="/" component={App} />
+      <Route path="/welcome" component={Welcome} />
+      <Route path="/signin" component={SignInSide} />
+      <Route path="/signup" component={SignUp} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/cart" component={Cart} />
+      <Route path="/meals" component={Meals} />
+        
     </div>
   </Router>
 );

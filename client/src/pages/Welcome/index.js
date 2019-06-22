@@ -15,6 +15,7 @@ import Typography from "@material-ui/core/Typography";
 
 
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -24,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 345,
   },
   container: {
-    marginTop: "5%"
+    marginTop: "5%",
+    width: "1280px"
   },
   paper: {
     padding: theme.spacing(2),
@@ -63,6 +65,7 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
+      <div className="g-signin2" data-onsuccess="onSignIn"></div>
       <br />
       <img src={require("../../Assets/Images/hero-image.png")} alt="intro"></img> 
       <div className={classes.cta}>

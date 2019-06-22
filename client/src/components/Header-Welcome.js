@@ -11,6 +11,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
+
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
@@ -118,6 +119,8 @@ export default function Header() {
       <Link to="/signin"><MenuItem onClick={handleMenuClose}>Log In</MenuItem></Link>
       <Link to="/signup"><MenuItem onClick={handleMenuClose}>Sign Up</MenuItem></Link>
       <Link to="/profile"><MenuItem onClick={handleMenuClose}>My Profile</MenuItem></Link>
+      <Link to="/login"><MenuItem onClick={handleMenuClose}>Log in</MenuItem></Link>
+      
     </Menu>
   );
 
