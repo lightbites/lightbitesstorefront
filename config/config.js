@@ -13,22 +13,22 @@ function getDBConfigFromUrl(url){
 
 //NOTE: Using local machine data here to get app running
 const config = {
-  "development": {
-    "username": "e3NKsKpA0A",
-    "password": "KxhacQ1HhW",
-    "database": "e3NKsKpA0A",
-    "host": "remotemysql.com",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  },
   // "development": {
-  //   "username": "root",
-  //   "password": "$Wordf1sh211986",
-  //   "database": "light_bites_db",
-  //   "host": "127.0.0.1",
+  //   "username": "e3NKsKpA0A",
+  //   "password": "KxhacQ1HhW",
+  //   "database": "e3NKsKpA0A",
+  //   "host": "remotemysql.com",
   //   "dialect": "mysql",
   //   "operatorsAliases": false
   // },
+  "development": {
+    "username": "root",
+    "password": "$Wordf1sh211986",
+    "database": "light_bites_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
   // "production": {
   //   "username": "oksaj277smiocexp",
   //   "password": "xm8hchwk11pd53wq",
